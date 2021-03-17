@@ -4,7 +4,8 @@ const {
 
     GraphQLObjectType,
     GraphQLInt,
-    GraphQLString
+    GraphQLString,
+    GraphQLSchema
 
 } = graphql;
 
@@ -35,4 +36,8 @@ const RootQuery = new GraphQLObjectType({
             }
         }
     }
+});
+
+module.exports = new GraphQLSchema ({
+    query: RootQuery
 });
